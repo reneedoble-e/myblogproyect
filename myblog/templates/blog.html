@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h1>¡Hola <span id ="username">{{username}}</span>!</h1>
+    <form id="postForm" method="post">
+        <label for="titulo">Titulo:</label>
+        <input type="text" id="titulo" name="titulo" required><br>
+        <label for="texto">Texto:</label>
+        <textarea id="texto" name="texto" required></textarea><br>
+        <button type="submit">Publicar</button>
+        </form>
+        <div id="postsContainer">
+
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
